@@ -8,6 +8,14 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     marginBottom: 20
   },
+  signAreaRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginRight: 60,
+    height: 70,
+    marginTop: 1
+  },
   signArea: {
     height: '100%',
     width: '200px',
@@ -56,17 +64,32 @@ interface PDF_FooterProps {
 const PDF_Footer: React.FC<PDF_FooterProps> = ({ totales, backgroundStyles, textStyles, generalStyles }) => (
   <View wrap={false} style={[styles.footer, backgroundStyles.content]}>
     <View style={[{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }]}>
-      <View style={[{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginRight: 60 }]}>
-        <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
-          <Text>Elaborado por: </Text>
-        </View>
+      <View style={[{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', marginRight: 60 }]}>
+        <View style={[styles.signAreaRow]}>
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Elaborado por: </Text>
+          </View>
 
-        <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
-          <Text>Revisado por: </Text>
-        </View>
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Revisado por: </Text>
+          </View>
 
-        <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
-          <Text>Aprobado por: </Text>
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Aprobado por: </Text>
+          </View>
+        </View>
+        <View style={[styles.signAreaRow]}>
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Aprobado por: </Text>
+          </View>
+
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Aprobado por: </Text>
+          </View>
+
+          <View style={[styles.signArea, backgroundStyles.footerInfo, textStyles.infoOrdenServicio]}>
+            <Text>Aprobado por: </Text>
+          </View>
         </View>
       </View>
 
