@@ -1,21 +1,32 @@
 import express from "express";
-import createTemplate from "./create-template";
+import createARS from "./PDFs/ARS/PDF-ARS";
 
 const app = express();
 app.use(express.json());
 const port = 3000;
 
 app.post("/", async (req, res) => {
-    // Calling the template render func with dynamic data
-    const result = await createTemplate(req.body);
-  
-    // Setting up the response headers
-    res.setHeader("Content-Type", "application/pdf");
-    res.setHeader("Content-Disposition", `attachment; filename=export.pdf`);
-  
-    // Streaming our resulting pdf back to the user
-    result.pipe(res);
+    // Log the raw request body to ensure it is being received correctly
+
+    // Ensure the data is in the expected format
+    if (!req.body.ARSHeaderInfo || !req.body.ARSItems) {
+        return res.status(400).send({ error: "Invalid data format" });
+    }
+
+    // Now that we know the data structure is correct, pass it to createARS
+    const json = req.body;
+
+    try {
+        const result = await createARS(json);
+        res.setHeader("Content-Type", "application/pdf");
+        res.setHeader("Content-Disposition", `attachment; filename=export.pdf`);
+        result.pipe(res);
+    } catch (error) {
+        console.error("Error creating PDF:", error);
+        res.status(500).send({ error: "Error generating PDF" });
+    }
 });
+
 
 app.listen(port, () => {
     console.log(`The sample PDF app is running on port ${port}.`);
