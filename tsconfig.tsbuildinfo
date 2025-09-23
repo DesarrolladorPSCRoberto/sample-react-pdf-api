@@ -1,0 +1,1 @@
+{"root":["./src/create-template.tsx","./src/index.ts","./src/pdfs/ars/pdf-ars-footer.tsx","./src/pdfs/ars/pdf-ars-header.tsx","./src/pdfs/ars/pdf-ars-tabla-fila.tsx","./src/pdfs/ars/pdf-ars-tabla.tsx","./src/pdfs/ars/pdf-ars-totales.tsx","./src/pdfs/ars/pdf-ars.tsx"],"version":"5.9.2"}

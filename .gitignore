@@ -1,2 +1,47 @@
-node_modules
-build
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.development
+.env.production
+.env.staging
+.env.test
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build output
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Optional Jest cache
+jest.cache
+
+# Coverage directory used by testing tools
+coverage/
