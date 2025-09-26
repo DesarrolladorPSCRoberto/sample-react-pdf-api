@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc --build",
     "serve:build": "node build/index.js",
-    "start:dev": "cross-env NODE_ENV=development nodemon src/index.ts",
+    "start:dev": "cross-env NODE_ENV=development nodemon --ext ts,tsx src/index.ts",
     "start:test": "cross-env NODE_ENV=test nodemon src/index.ts",
     "start:stage": "cross-env NODE_ENV=staging nodemon src/index.ts",
     "start:prod": "npm run build && npm run serve:build"
@@ -22,10 +22,11 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@react-pdf/renderer": "^2.0.21",
+    "@react-pdf/renderer": "^4.3.0",
     "dotenv": "^17.2.2",
     "env": "^0.0.2",
     "express": "^4.17.2",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

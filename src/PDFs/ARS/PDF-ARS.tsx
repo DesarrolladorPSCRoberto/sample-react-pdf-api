@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom';
 import ReactPDF, { Document, Page, StyleSheet, View } from '@react-pdf/renderer';
 import Header, { type ARSHeaderInfo } from './PDF-ARS-Header'
 import Footer, { type totales } from './PDF-ARS-Footer'
@@ -137,7 +138,6 @@ const ARSInvoicePDF: React.FC<ARSInvoicePDFProps> = ({ info }) => {
     </Document>
   );
 };
-
 export default async (data: InfoARS) => {
   // Log the data received
 

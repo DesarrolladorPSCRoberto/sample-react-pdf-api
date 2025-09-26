@@ -2,7 +2,6 @@ import React from 'react'; // 👈 Necesario para JSX
 import { Text, View, StyleSheet } from '@react-pdf/renderer';
 const styles = StyleSheet.create({
   totalSection: {
-    border: '1px solid #324c68',
     textAlign: 'right',
     fontSize: 8,
     fontWeight: 'bold',
