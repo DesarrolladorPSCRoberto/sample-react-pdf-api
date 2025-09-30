@@ -9,7 +9,6 @@ const testARSHeader: ARSHeaderInfo = {
     documento_oc_orden: "000413",
     fecha_creacion: "2025-08-01T16:36:51.000Z",
     nombre_proyecto: "SPPB - Lindecon",
-    fecha_dcto: "2024-05-20T05:00:00.000Z",
     id_tercero: "901191984",
     nombre_tercero: "LOGISTICA Y TRANSPORTE HM SAS",
     usuario_que_genero: "Roberto Maldonado"

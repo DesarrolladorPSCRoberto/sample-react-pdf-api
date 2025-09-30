@@ -97,7 +97,6 @@ export interface ARSHeaderInfo {
     documento_oc_orden: string;
     fecha_creacion: string;
     nombre_proyecto: string;
-    fecha_dcto: string;
     id_tercero: string;
     nombre_tercero: string;
     usuario_que_genero: string;
