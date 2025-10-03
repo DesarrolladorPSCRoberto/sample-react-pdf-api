@@ -28,6 +28,7 @@ pids/
 # Build output
 dist/
 build/
+*.pdf
 
 # IDEs
 .vscode/
