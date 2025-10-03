@@ -10,7 +10,7 @@ yarn-error.log*
 .env.production
 .env.staging
 .env.test
-
+*.pdf
 # Logs
 logs/
 *.log
